@@ -1,0 +1,99 @@
+
+*---------------------Menu-----------------------*/
+*{
+    margin: 0;
+    padding: 0;
+}
+/*.menu{
+    /* canh giữa cách lề mỗi bên 10% */
+    /*margin: 5px 5%;
+}*/
+.menu {
+    background: rgb(81, 135, 197); /*tô màu cho menu cha*/
+    border-radius: 5px; /* bo góc */
+    /* padding: 0px 0px 0px 160px; */
+}
+.list1{
+  max-width: 960px;
+  margin: 0px auto;
+}
+.menu ul{
+    display: flex;
+    z-index: 99999;
+}
+/* fix bug */
+.list1 ul.list2{
+  position: absolute;
+}
+/* .list1 li{
+  position: relative;
+} */
+
+/* kết thúc fix bug*/
+.menu> ul li{
+    list-style: none; /* bỏ dấu chấm mặc định của li */
+    /* kẻ đường bên trái và bên phải của li */
+    border-right: 1px solid rgb(81, 135, 197);
+    border-left:1px solid rgb(81, 135, 197);
+}
+.menu> ul li a{
+    display: block;
+    padding: 0 25px;
+    line-height: 50px;
+    color: #f1f2f3;
+    text-decoration: none;
+    font-size: 20px;
+}
+.menu ul li:first-child {
+    border-left: none; /* bỏ đường kè trái của phần tử đầu tiên */
+}
+.menu> ul li:first-child a{
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+/* Khi hover đến li, tô màu cho thẻ a */
+.menu ul li:hover>a{
+    background: rgb(37, 145, 69);
+    opacity: .7;
+    color: white;
+}
+/*menu con*/
+/*Ẩn các menu con cấp 1,2,3*/
+.menu li ul{
+    display: none;
+    /* min-width: 185px; */
+    position: absolute;
+}
+.menu ul li ul li a{
+  font-size: 17px;
+}.menu li>ul li{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background: rgb(81, 135, 197);
+    text-align: left;
+}
+.menu li>ul li:first-child a{
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+}
+.menu li>ul li:last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.menu li>ul li:last-child a{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+/*khi hover thì hiện menu con*/
+.menu  li:hover > ul{
+    display:  block;
+}
+/*Hiển thị menu con cấp 2,3,4 bên cạnh phải*/
+.menu > ul li > ul li >ul{
+    margin-left: 352px;
+    margin-top: -50px;
+}
+/*----------------Kết thúc menu-------------------*/
+
+/*---------------------Menu-----------------------*/
